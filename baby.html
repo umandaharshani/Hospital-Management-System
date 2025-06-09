@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMS Mother & Baby Care</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f8fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #69b4a0;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            color: #4a90e2;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-item h3 {
+            color: #69b4a0;
+            font-size: 1.4em;
+            margin-top: 10px;
+        }
+
+        .service-item p {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .cta a {
+            background-color: #69b4a0;
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        .cta a:hover {
+            background-color: #558d7f;
+        }
+
+        footer {
+            background-color: #69b4a0;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+
+        .footer-logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            font-size: 2.5em;
+            color: #4a90e2;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .service-item {
+                padding: 20px;
+            }
+
+            .cta a {
+                padding: 12px 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>HMS Mother & Baby Care</h1>
+        <p>Your Journey to Parenthood Starts Here</p>
+    </header>
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Services & Support Programmes</h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-item">
+                <i class="fas fa-baby icon"></i>
+                <h3>Free Antenatal Advisory Programmes</h3>
+                <p>Join our free antenatal advisory programmes tailored to your needs. Available at various locations.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-stethoscope icon"></i>
+                <h3>Access to Expert Consultants</h3>
+                <p>Consult with our multidisciplinary panel of specialists to ensure the best care for you and your baby.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-diagnoses icon"></i>
+                <h3>Advanced Diagnostic Testing</h3>
+                <p>Receive cutting-edge diagnostic tests to monitor the health of both mother and baby throughout pregnancy.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-baby-carriage icon"></i>
+                <h3>Modern, Comfortable Birthing Facilities</h3>
+                <p>Enjoy a stress-free delivery in our state-of-the-art birthing facilities equipped for comfort and safety.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-heart icon"></i>
+                <h3>Neonatal Intensive Care Units (NICU)</h3>
+                <p>Our NICUs are staffed with trained professionals to provide specialized care for newborns in need.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-hand-holding-heart icon"></i>
+                <h3>Lactation Management Support</h3>
+                <p>Get expert advice on breastfeeding and lactation management. Available exclusively at ACH.</p>
+            </div>
+        </div>
+
+        <div class="cta">
+            <a href="#details">View More Services</a>
+        </div>
+
+        <div class="section-title">
+            <h2>Why Choose HMS Mother & Baby Care?</h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-item">
+                <i class="fas fa-calendar-alt icon"></i>
+                <h3>30+ Years of Trust</h3>
+                <p>We have been a trusted provider for over three decades, welcoming new generations of families.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-gift icon"></i>
+                <h3>Special Gifts for Every Baby</h3>
+                <p>Every newborn receives a special gift package, including an LKR 5,000 investment and a framed photo.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-shield-alt icon"></i>
+                <h3>Top Neonatal Care</h3>
+                <p>Our neonatal facilities offer peace of mind, with the highest quality of care for newborns if required.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-logo">HMS Mother & Baby Care</div>
+        <p>© 2024 HMS Heart Centre. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

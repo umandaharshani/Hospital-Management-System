@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMS Laboratory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #81c784;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .inner-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .inner-title h2 {
+            color: #00796b;
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .search-bar input {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .lab-reports {
+            margin-top: 30px;
+        }
+
+        .lab-report {
+            display: flex;
+            justify-content: space-between;
+            background-color: #b2ebf2;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .lab-report:hover {
+            background-color: #80deea;
+        }
+
+        .lab-report-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lab-report-info p {
+            margin: 5px 0;
+        }
+
+        .download-button {
+            background-color: #388e3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .download-button:hover {
+            background-color: #2e7d32;
+        }
+
+        footer {
+            background-color: #00796b;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>HMS Laboratory Reports</h1>
+        <p>Download your lab reports easily with your receipt number.</p>
+    </header>
+
+    <div class="container">
+        <div class="inner-title">
+            <h2>Available Lab Reports</h2>
+            <p>Find your lab report below and download it instantly.</p>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" onkeyup="filterReports()" placeholder="Search by patient name, report type, or receipt number...">
+        </div>
+
+        <div class="lab-reports" id="labReports">
+            <div class="lab-report">
+                <div class="lab-report-info">
+                    <p><strong>Report Type:</strong> Blood Test</p>
+                    <p><strong>Patient Name:</strong> Thushan Rasanjana</p>
+                    <p><strong>Receipt Number:</strong> #12345</p>
+                    <p><strong>Date:</strong> 2024-10-16</p>
+                </div>
+                <a href="reports\bloodreport.pdf" download class="download-button">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+
+            <div class="lab-report">
+                <div class="lab-report-info">
+                    <p><strong>Report Type:</strong> MRI Scan</p>
+                    <p><strong>Patient Name:</strong> Mallika Hellarawa</p>
+                    <p><strong>Receipt Number:</strong> #12346</p>
+                    <p><strong>Date:</strong> 2024-10-15</p>
+                </div>
+                <a href="reports/mri.pdf" download class="download-button">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+
+            <div class="lab-report">
+                <div class="lab-report-info">
+                    <p><strong>Report Type:</strong> X-Ray</p>
+                    <p><strong>Patient Name:</strong> Umanda Abeykoon</p>
+                    <p><strong>Receipt Number:</strong> #12347</p>
+                    <p><strong>Date:</strong> 2024-10-14</p>
+                </div>
+                <a href="reports/xray.pdf" download class="download-button">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+
+            <div class="lab-report">
+                <div class="lab-report-info">
+                    <p><strong>Report Type:</strong> Ultrasound</p>
+                    <p><strong>Patient Name:</strong> Ajith Kumar</p>
+                    <p><strong>Receipt Number:</strong> #12348</p>
+                    <p><strong>Date:</strong> 2024-10-13</p>
+                </div>
+                <a href="reports/ultrasound.pdf" download class="download-button">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 HMS Laboratory. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function filterReports() {
+            const searchInput = document.getElementById("searchInput").value.toLowerCase();
+            const labReports = document.getElementById("labReports");
+            const reports = labReports.getElementsByClassName("lab-report");
+
+            for (let i = 0; i < reports.length; i++) {
+                const reportText = reports[i].innerText.toLowerCase();
+                if (reportText.includes(searchInput)) {
+                    reports[i].style.display = "flex";
+                } else {
+                    reports[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
